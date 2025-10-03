@@ -269,11 +269,20 @@
         }
 
         .tabbar {
-            height: 60px;
-            background: var(--card-bg);
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
+  position: fixed;
+  bottom: 60px;   /* ← ここで下から60px浮かす */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 402px;   /* 外枠と同じ幅で固定 */
+  height: 60px;
+  background: var(--card-bg);
+  display: flex;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 36px 36px; /* 見た目が自然になるよう角丸も */
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
 
         .tabbar button {
             flex: 1;
